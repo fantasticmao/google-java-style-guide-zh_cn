@@ -1,4 +1,10 @@
-# Google Java 编程风格指南
+---
+title: "Google Java 编程风格指南"
+date: 2020-05-06T00:00:00+08:00
+lastmod: 2020-05-06T00:00:00+08:00
+categories: ["编程"]
+tags: ["Java", "Google", "Code Style"]
+---
 
 > 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准。
 
@@ -350,7 +356,7 @@ private enum Answer {
 }
 ```
 
-没有方法和注释的枚举常量可以写成数组初始化的方式（请见 [数组初始化](数组初始化可以写成块状结构) 章节）。
+没有方法和注释的枚举常量可以写成数组初始化的方式（请见 [数组初始化](#数组初始化可以写成块状结构) 章节）。
 
 ```java
 private enum Suit { CLUBS, HEARTS, SPADES, DIAMONDS }
@@ -454,7 +460,7 @@ public String getNameIfPresent() { ... }
 
 #### 注释
 
-本章节介绍 _implementation comments_ 实现注释。Javadoc 将在 [Javadoc](#Javadoc) 章节单独介绍。
+本章节介绍 _implementation comments_ 实现注释。Javadoc 将在 [Javadoc](#javadoc) 章节单独介绍。
 
 任何换行符之前都可以有任意数量的跟随着实现注释的空格。这样的注释使该行成为非空白的。
 
@@ -697,7 +703,7 @@ public int method(String p1) { ... }
 
 至少，Javadoc 应该出现在每个 `public` 类，和这个类的每个 `public` 或者 `protected` 成员，但除了以下提及的几个例外。
 
-额外的 Javadoc 内容也可以出现，正如在 [非必需的 Javadoc](#非必需的-Javadoc) 章节中所描述的。
+额外的 Javadoc 内容也可以出现，正如在 [非必需的 Javadoc](#非必需的-javadoc) 章节中所描述的。
 
 #### 特殊情况：自解释的方法
 
