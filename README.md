@@ -1,10 +1,4 @@
----
-title: "Google Java 编程风格指南"
-date: 2020-05-06T00:00:00+08:00
-lastmod: 2020-05-06T00:00:00+08:00
-categories: ["编程"]
-tags: ["Java", "Google", "Code Style"]
----
+# Google Java 编程风格指南
 
 > 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准。<!--more-->
 
