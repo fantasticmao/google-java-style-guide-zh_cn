@@ -6,7 +6,7 @@ categories: ["编程"]
 tags: ["Java", "Google", "Code Style"]
 ---
 
-> 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准。
+> 转载并翻译自 [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)。个人英语水平有限，应以原文档为标准。<!--more-->
 
 ## 简介
 
@@ -19,8 +19,8 @@ tags: ["Java", "Google", "Code Style"]
 在本文档中，除非另有说明：
 
 1. _class_ 类 表示 _ordinary class_ 普通的类、_enum class_ 枚举类、_interface_ 接口或 _annotation_ 注解类型。
-2. _member_ 成员 表示 _nested class_ 嵌套类、_field_ 属性、_method_ 方法或 _constructor_ 者构造方法，即除初始化方法和注释之外，类的所有最顶层内容。
-3. _comment_ 注释 表示 _implementation comments_ 实现注释。我们不使用术语 _documentation comments_，而是使用（在 Java 中）更通用的术语 _javadoc_。
+2. _member_ 成员 表示 _nested class_ 嵌套类、_field_ 字段、_method_ 方法或 _constructor_ 者构造方法，即除初始化方法和注释之外，类的所有最顶层内容。
+3. _comment_ 注释 表示 _implementation comments_ 实现注释。我们不使用术语 _documentation comments_，而是使用（在 Java 中）更通用的术语 _Javadoc_。
 
 其它出现在本文档中的术语将另作说明。
 
