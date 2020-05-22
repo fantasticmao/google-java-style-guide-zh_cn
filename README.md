@@ -43,9 +43,9 @@
 1. 字符串和字符字面量中的所有非空格字符都要进行转义。
 2. 不允许使用制表符缩进。
 
-#### 特殊转义字符
+#### 特殊转义序列
 
-对任何需转义表示（ `\b`、`\t`、`\n`、`\f`、`\r`、`\"`、`\'`、`\\` ）的 [特殊字符](http://docs.oracle.com/javase/tutorial/java/data/characters.html)，推荐使用转义字符，而不是八进制（例如 `\012` ）或者 Unicode 转义（例如 `\u000a` ）。
+对于任何含有 [特殊转义序列](http://docs.oracle.com/javase/tutorial/java/data/characters.html)（ `\b`、`\t`、`\n`、`\f`、`\r`、`\"`、`\'` 和 `\\` ）的字符，推荐使用这些转义序列，而不是对应的八进制（例如 `\012` ）或者 Unicode（例如 `\u000a` ）转义字符。
 
 #### 非 ASCII 字符
 
