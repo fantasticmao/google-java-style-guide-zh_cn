@@ -572,7 +572,7 @@ public String getNameIfPresent() { ... }
 
 #### 包名
 
-包名全是小写的，连续的单词只需要简单地串联在一起（不使用下划线）。例如，使用 `com.example.deepspace`，而不是 `com.example.deepSpace` 或者 `com.example.deep_space`。
+包名只使用小写字母和数字（不使用下划线），连续的单词直接拼接在一起。例如，使用 `com.example.deepspace`，而不是 `com.example.deepSpace` 或者 `com.example.deep_space`。
 
 #### 类名
 
@@ -582,7 +582,7 @@ public String getNameIfPresent() { ... }
 
 注解类型的命名没有特定的规则或者完善的约定。
 
-测试类以被测试类的名称开头，并且以 `Test` 结尾。例如 `HashTest` 或者 `HashIntegrationTest`。
+测试类的名称以 `Test` 结尾，例如 `HashIntegrationTest`。如果它覆盖了一整个类，则它的名称是该类的名称加上 `Test`，例如 `HashImplTest`。
 
 #### 方法名
 
@@ -590,22 +590,21 @@ public String getNameIfPresent() { ... }
 
 方法名通常是动词或者动词短语。例如 `sendMessage` 或者 `stop`。
 
-下划线可能为了分离命名上的逻辑组件，而出现在 Junit 测试方法名中，每个组件都以 [小骆峰](#骆驼峰形式定义) 方式编写。一个典型的模式是 `<methodUnderTest>_<state>`，例如 `pop_emptyStack`。测试方法的命名没有一种唯一正确的方式。
+下划线可以出现在 JUnit 测试方法名中，用于分隔命名上的逻辑组件，每个组件都以 [小骆峰](#骆驼峰形式定义) 方式编写，例如 `transferMoney_deductsFromSource`。测试方法的命名没有一种唯一正确的方式。
 
 #### 常量名
 
-常量使用 `CONSTANT_CASE` 的格式命名：全大写，单词之间以下划线分隔。但常量究竟意味着什么？
+常量使用 `UPPER_SNAKE_CASE` 的格式命名：全大写，单词之间以下划线分隔。但常量究竟意味着什么？
 
-常量是 static final 修饰的字段，常量的内容是深不可变的（deeply immutable)，并且常量的方法是没有副作用的。这包括了原始类型、字符串、不可变类型、不可变类型的不可变集合。如果实例的任何外在状态是可变的，那它就不属于常量。仅仅保证实例引用的不可变属性是不够的。例如：
+常量是 static final 修饰的字段，常量的内容是深不可变的（deeply immutable)，并且常量的方法是没有副作用的。以下示例包括了原始类型、字符串、不可变的值类型，和任何可以设置为 `null` 的内容。如果实例的任何外在状态是可变的，那它就不属于常量。仅仅保证实例引用的不可变属性是不够的。例如：
 
 ```java
 // Constants
 static final int NUMBER = 5;
 static final ImmutableList<String> NAMES = ImmutableList.of("Ed", "Ann");
-static final ImmutableMap<String, Integer> AGES = ImmutableMap.of("Ed", 35, "Ann", 32);
+static final Map<String, Integer> AGES = ImmutableMap.of("Ed", 35, "Ann", 32);
 static final Joiner COMMA_JOINER = Joiner.on(','); // because Joiner is immutable
 static final SomeMutableType[] EMPTY_ARRAY = {};
-enum SomeEnum { ENUM_CONSTANT }
 
 // Not constants
 static String nonFinal = "non-final";
@@ -724,7 +723,7 @@ somethingThatYieldsAFoo().aStaticMethod(); // very bad
 
 重写 `Object.finalize` 方法是 **非常罕见** 的。
 
-> **提示**：禁止这么做。如果你真的需要，请先仔细阅读和理解 [《Effective Java》第七章](http://books.google.com/books?isbn=8131726592) —— 避免使用 Finalizer，然后禁止这么做。
+> **提示**：禁止这么做。如果你真的需要，请先仔细阅读和理解 [《Effective Java》第七章](http://books.google.com/books?isbn=0134686047) —— 避免使用 Finalizer 和 Cleaner，然后禁止这么做。
 
 ---
 
